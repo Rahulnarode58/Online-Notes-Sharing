@@ -1,0 +1,81 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Note Sharing</title>
+
+    <!-- google fonts cdn link  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+    <div id="menu" class="fas fa-bars"></div>
+    <a href="{% url 'index' %}" class="logo"><i class="fas fa-book-reader"></i> Online Notes Sharing</a>
+
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'signup' %}">User Signup</a></li>
+            <li><a href="{% url 'login' %}">User Login</a></li>
+            <li><a href="{% url 'login_admin' %}">Admin Login</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- header section ends -->
+
+<!-- home section starts  -->
+<section class="home" id="home">
+    <h1 style="background-color : #F1B90F">online notes sharing</h1>
+    <div class="shape"></div>
+</section>
+<!-- home section ends -->
+
+
+<!-- footer section starts  -->
+<div class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3> locations</h3>
+            <a href="#">India</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="{% url 'index' %}">home</a>
+            <a href="{% url 'about' %}">about</a>
+            <a href="{% url 'contact' %}">contact</a>
+       </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-map-marker-alt"></i> Lasur Station Chatrapati Sambhajinagar 423702. </p>
+            <p> <i class="fas fa-envelope"></i> Rahulnarode58@gmail.com </p>
+            <p> <i class="fas fa-phone"></i> +919404851203 </p>
+        </div>
+    </div>
+    <h1 class="credit">All Rights Reserved @rahulnarode</h1>
+</div>
+<!-- footer section ends -->
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
